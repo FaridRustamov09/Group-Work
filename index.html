@@ -6,13 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
   </head>
+
   <body>
     <div class="container">
       <div class="small-box">
-        <svg
+       <img src="./Rectangle 32.png" alt="">
+        <!-- <svg
           class="yellow-line"
           xmlns="http://www.w3.org/2000/svg"
-          width="336"
+        
           height="28"
           viewBox="0 0 336 28"
           fill="none"
@@ -21,48 +23,14 @@
             d="M0 10C0 4.47715 4.47715 0 10 0H326C331.523 0 336 4.47715 336 10V28H0V10Z"
             fill="#FFDC40"
           />
-        </svg>
+        </svg> -->
         <h1>To-do list</h1>
-        <svg
-          class="filters"
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="15"
-          viewBox="0 0 25 15"
-          fill="none"
-        >
-          <rect x="2.5" width="2.5" height="12.5" fill="#C4C4C4" />
-          <rect
-            x="10"
-            y="3.75"
-            width="2.5"
-            height="7.5"
-            transform="rotate(-90 10 3.75)"
-            fill="#C4C4C4"
-          />
-          <rect
-            x="10"
-            y="8.75"
-            width="2.5"
-            height="10"
-            transform="rotate(-90 10 8.75)"
-            fill="#C4C4C4"
-          />
-          <rect
-            x="10"
-            y="13.75"
-            width="2.5"
-            height="15"
-            transform="rotate(-90 10 13.75)"
-            fill="#C4C4C4"
-          />
-          <path
-            d="M3.75 15L0.502405 10.3125L6.9976 10.3125L3.75 15Z"
-            fill="#C4C4C4"
-          />
-        </svg>
-        <form action="">
-          <input type="text" />
+        
+        <main>
+          <form action="">
+            <input class="search" placeholder="search" type="text">
+          <input class="main-input" type="text" />
+        
           <svg
             class="icon-X"
             xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +50,37 @@
             <path d="M6 6L14 14" stroke="#C4C4C4" />
             <path d="M6 14L14 6" stroke="#C4C4C4" />
           </svg>
-          <button type="submit"><img src="./Group 41.png" alt="" /></button>
+          <p class="error-msg">File all the data</p>
+          <button class="add-btn" type="submit"><img src="./Group 41.png" alt="" /></button>
         </form>
-        <ul><li>Lorem, ipsum.</li></ul>
+        <ul>
+          <!-- <li>
+            <p>Почистить зубы</p>
+            <button class="remove-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="19"
+                  height="19"
+                  rx="9.5"
+                  stroke="#C4C4C4"
+                />
+                <path d="M6 6L14 14" stroke="#C4C4C4" />
+                <path d="M6 14L14 6" stroke="#C4C4C4" />
+              </svg>
+            </button>
+          </li> -->
+        </ul></main>
+      
       </div>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>
