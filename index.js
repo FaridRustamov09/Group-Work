@@ -1,23 +1,24 @@
 // create todo list
-let p=document.querySelector('p')
+let error=document.querySelector('.error-msg')
 let mainInput= document.querySelector('.main-input')
-let searchInput= document.querySelector('.search-input')
+let searchInput= document.querySelector('.search')
 let form=document.querySelector('form')
 let ul=document.querySelector('ul')
+// let i
 form.addEventListener('submit',addTask)
 //add todo 
 
 function addTask(e) {
     e.preventDefault()
-    if (i.value.length==0) {
-        p.style.display='block'
+    if (mainInput.value.length==0) {
+        error.style.display='block'
         ul.style.display='none'
      }
      else{
-        p.style.display='none'
+        error.style.display='none'
         ul.style.display='block'
         ul.innerHTML+=`<li>
-            <p>${i.value}</p>
+            <p>${mainInput.value}</p>
             <button class="remove-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,3 +61,19 @@ function addTask(e) {
     }
     }
     //search todo
+       
+    searchInput.addEventListener('keyup',(e)=>searchList(e))
+
+    function searchList(e) {
+   let list=document.querySelectorAll('li')
+   console.log(e.target.value);
+   
+   list.forEach(element => {
+    if (element.firstElementChild.innerText.includes(e.target.value)) {
+    element.style.display='flex'
+    } else {
+     element.style.display='none'   
+    }
+   });
+    }
+    
